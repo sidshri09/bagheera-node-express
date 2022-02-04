@@ -1,0 +1,129 @@
+
+POST https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/user/add
+content-type: application/json
+
+{
+    "username" : "Mega",
+    "password" : "pwdd2345",
+    "email" : "Mega@gmail.com"   
+}
+
+###
+
+GET https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/user/?search=
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+###
+
+GET http://localhost:5000/user/61f3f5b90298c11139c3406b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzcxNjA0NiwiZXhwIjoxNjQzNzE3ODQ2fQ.E6Z9fHnEz-v5qHtL3cODbAU3yx0aUgu3MpvQA2LDpMs
+###
+
+GET https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/user/username/sid
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+
+###
+
+POST http://localhost:5000/login/
+Content-Type: application/json
+
+
+{
+    "username": "sid",
+    "password": "WAX098jik"
+}
+
+###
+POST  https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.c2lk.3thypls9-Ta30t97NcozX15nS3FK0cQ_hmkNSWZY9Is"
+}
+
+###
+PUT http://localhost:5000/logout/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzU2MDE4OSwiZXhwIjoxNjQzNTYxOTg5fQ.5pO6O7SlzMnCBME6XJogJC8cAiHVHroFUrPgAsfJ9OI
+
+
+###
+POST https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+{
+    "content" : "another reply to post on 1st Feb 2022",
+    "parent_post" : "61fab643d1b52839bbe0e0c5"
+}
+###
+GET https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/post/?search=
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgxOTE5NiwiZXhwIjoxNjQzODIwOTk2fQ.z319aLWr2Duz4WRg_lrZQ3dZdw6p6U4POX5pkiZR02A
+###
+
+GET https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/post/61fab643d1b52839bbe0e0c5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+###
+GET https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/post/replies/61fab643d1b52839bbe0e0c5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+###
+PUT  https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/post/61fab643d1b52839bbe0e0c5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+{
+    "content" : "updated post at 11:22 PM on 1st Feb 2022"
+}
+###
+DELETE https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/post/61f90d8fc63f5c8eaa1eff6d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+###
+POST https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/vote/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyMzUxNSwiZXhwIjoxNjQzODI1MzE1fQ.5beL5g4CW0mgmoYo80HKP4KSVSS5OqagVWJ1j0Z6ruw
+
+{
+    "id" : "61fab643d1b52839bbe0e0c5",
+    "dir" : true
+}
+
+###
+POST https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/follower/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyNTQ4NywiZXhwIjoxNjQzODI3Mjg3fQ.YzzoQRovsjmNY9ZekbBbpdVglbyNtbE-_CYE6YzJngY
+
+{
+    "following" : "61f3f5b00298c11139c34069",
+    "dir" : true
+}
+
+###
+PUT https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/user/changepassword/
+Content-Type: application/json
+
+{
+    "username" : "sid",
+    "old_password" : "WAX098jik",
+    "password" : "QNM12adh"
+}
+
+###
+PUT https://yry2nmqi85.execute-api.us-east-1.amazonaws.com/PROD/user/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZCIsImlhdCI6MTY0MzgyNTQ4NywiZXhwIjoxNjQzODI3Mjg3fQ.YzzoQRovsjmNY9ZekbBbpdVglbyNtbE-_CYE6YzJngY
+
+{
+    "email":"sidshri@outlook.com",
+    "phone": 9158003623
+}
